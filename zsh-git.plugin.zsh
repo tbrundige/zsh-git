@@ -44,80 +44,43 @@ alias grm='git rm'
 # Functions
 
 function git_clone_and_cd() {
-
   if [[ -z $2 ]]; then
-
     git clone --recurse-submodules $1 && cd $(basename $1 .git)
-
   else
-
     git clone --recurse-submodules $1 $2 && cd $2
-
   fi
-
 }
 
 # List all git aliases from the README:
 
 function git_list_aliases() {
-
   filename=~/.oh-my-zsh/custom/plugins/git/README.md
-
   from=$(grep -Fno '| **g** ' ${filename} | cut -f1 -d:)
-
   stop=$(grep -no '&nbsp;' ${filename} | cut -f1 -d:)
-
   to=$((stop - 2))
-
-
-
   echo '_______________________________________________________________________________
-
 |             |                                                               |
-
 | Alias       | Command                                                       |
-
 |_____________|_______________________________________________________________|
-
 |             |                                                               |'
-
-
-
   sed -n "${from},${to}p;${stop}q" ${filename} | # Take out table
-
     tr -d '*\\' |    # Remove **bold** and \ escapes
-
     sed 's/.$//' |   # Remove last '|' because its no longer lining up
-
     while read -r line ; do
-
       echo "${(r:78:)line}" # Pad spaces to 78 chars (zsh specific)
-
     done |
-
     sed 's/$/|/'     # Re-append final '|'
-
-
-
   echo '|_____________|_______________________________________________________________|'
-
 }
 # Print short status and log of latest commits:
 
 function git_status_short() {
-
   if [[ -z $(git status -s) ]]; then
-
     echo 'Nothing to commit, working tree clean\n'
-
   else
-
     git status -s && echo ''
-
   fi
-
   git log -${1:-3} --oneline | cat
-
 }
 
 # Check if main exists and use instead of master:
