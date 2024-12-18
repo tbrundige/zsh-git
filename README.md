@@ -1,5 +1,5 @@
 # zsh-git
-## Aliases cheatsheet
+## Aliases
 
 | Alias           | Command                                                   |
 |:----------------|:----------------------------------------------------------|
@@ -22,7 +22,5 @@
 | **gpl**         | git pull                                                  |
 | **grm**         | git rm                                                    |
 | **gs**          | git status                                                |
-| **gss**          | git status short                                         |
-&nbsp;
-
+| **gss**         | git status short                                          |
 -------------------------------------------------------------------------------
