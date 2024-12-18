@@ -1,4 +1,5 @@
 # zsh-git
+
 ## Aliases
 
 | Alias           | Command                                                   |
