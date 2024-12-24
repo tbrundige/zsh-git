@@ -57,7 +57,7 @@ function git_clone_and_cd() {
 
 function git_list_aliases() {
   filename=./README.md
-  from=$(grep -Fno '| **g** ' ${filename} | cut -f1 -d:)
+  from=$(grep -Fno '| **glias** ' ${filename} | cut -f1 -d:)
   stop=$(grep -no '&nbsp;' ${filename} | cut -f1 -d:)
   to=$((stop - 2))
   echo '_______________________________________________________________________________
