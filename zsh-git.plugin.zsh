@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 alias galias='git_list_aliases'
 
 # git status aliases
