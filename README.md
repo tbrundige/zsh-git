@@ -4,9 +4,9 @@
 
 | Alias           | Command                                                   |
 |:----------------|:----------------------------------------------------------|
+| **galias**      | git_list_aliases                                          |
 | **g**           | git                                                       |
 | **ga**          | git add                                                   |
-| **galias**      | git_list_aliases                                          |
 | **gb**          | git branch                                                |
 | **gba**         | git branch --all                                          |
 | **gbd**         | git branch --delete                                       |
